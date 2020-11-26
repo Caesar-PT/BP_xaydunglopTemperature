@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(tempC) {
+                this.tempC = tempC;
+        }
+        ConvertCtoF(){
+            return 9/5 * this.tempC + 32;
+        }
+        ConvertCtoK(){
+            return this.tempC + 273.15;
+        }
+        showConvert(){
+            document.write('Nhiệt độ F: ' + this.ConvertCtoF() + '<br>');
+            document.write('Nhiệt độ K: ' + this.ConvertCtoK() +  '<br>');
+        }
+    }
+    function main(){
+        let x = prompt('Nhập nhiệt độ C: ');
+        if (x > -273) {
+            let myC = new Temperature(x);
+            myC.showConvert();
+        } else
+            alert('Lỗi nhiệt độ');
+    }
+    main();
+</script>
+
+</body>
+</html>
